@@ -205,6 +205,16 @@ $(document).ready(function() {
             }
          }
     });
+     // 슬라이드 클릭 이벤트 등록
+      swiper.on('click', function (swiper, event) {
+        // 모든 슬라이드에서 active 클래스 제거
+        swiper.slides.forEach((slide) => {
+          slide.classList.remove('active');
+        });
+
+        // 클릭한 슬라이드에 active 클래스 추가
+        event.target.closest('.swiper-slide').classList.add('active');
+      });
 });
   
 

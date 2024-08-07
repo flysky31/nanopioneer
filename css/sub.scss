@@ -348,7 +348,15 @@
                     }
                   .swiper-wrapper{
                     
-                    
+                    .swiper-slide-active{
+                         .logo_box {
+                             a {
+                                 figure{
+                                     border:2px solid #1445CE;
+                                 }
+                             }
+                        }
+                      }
                     .swiper-slide {
                         text-align: center;
                         font-size: 18px;

@@ -361,7 +361,10 @@
   margin: 10px 0 0;
   font-weight: 600;
 }
-
+#product01 .inner .swiper_area .swiper-container2 .swiper-wrapper .swiper-slide-active .logo_box a figure{
+   border:2px solid #1445CE;
+}
+  
 #product02 {
   margin: 100px 0;
 }

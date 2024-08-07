@@ -309,6 +309,171 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>   
-    <script src="../js/main.js"></script> 
+
+    <script>
+        
+        $(document).ready(function () {
+
+             //product slider
+             let mainswiper = new Swiper('.swiper-container2', {
+                //loop: true,
+                //preventClicks: true,
+                //preventClicksPropagation: false,
+                observer: true,
+                observeParents: true, 
+                // nextButton: '.swiper-button-next',
+                // prevButton: '.swiper-button-prev',
+                slidesPerView: 1,
+                //paginationClickable: true,
+                spaceBetween: 20,
+                touchRatio: 1,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    414: {
+                        slidesPerView: "auto",
+                    }
+                }
+            });
+          
+
+            
+
+
+
+
+            let ca_id = "";
+            $(".swiper-slide").each(function () {
+
+                if ($(this).hasClass('swiper-slide-active')) {
+                    ca_id = $(this).find('a').data('ca_id');
+                }
+            });
+            // 전체상품 불러오기
+            get_product(ca_id);
+
+           
+
+
+
+            //1차카테고리 클릭시
+            $(".logo_box a").click(function (e) {
+                //const index = $(this).parent().parent().index();
+               
+                e.preventDefault();
+                $(".swiper-slide").each(function() {
+                    if ($(this).hasClass('swiper-slide-active')) {
+                        $(this).removeClass('swiper-slide-active');
+                    }
+                });
+                //$(".swiper-slide").removeClass('active');
+                 $(this).parent().parent().addClass('swiper-slide-active');
+                ca_id = $(this).data('ca_id');
+                //get_category(ca_id)
+                get_product(ca_id);
+
+              
+              
+            });
+
+            $(".swiper-button-next, .swiper-button-prev").click(function (e) {
+                $(".swiper-slide").each(function () {
+                    if ($(this).hasClass('swiper-slide-active')) {
+                        ca_id = $(this).find('a').data('ca_id');
+                    }
+                });
+                //get_category(ca_id)
+                get_product(ca_id);
+            });
+
+            //$(".tab_area a").click(function (e) {
+            $(document).on("click",'.tab_area a',function(e){
+                
+                e.preventDefault();
+               // $(".tab_area a").removeClass('active');
+               // $(this).addClass('acitve');
+                ca_id = $(this).data('ca_id');
+                //get_category(ca_id)
+                get_product(ca_id);
+            });
+
+           
+
+
+
+
+            //get_product(ca_id);
+
+
+
+     
+
+
+        /*function get_category(ca_id) {
+
+            $.ajax({
+                type: "POST",
+                url: "/ajax/get_cate_list.php",
+                data: "ca_id=" + ca_id,
+                cache: false,
+                async: false,
+
+                success: function (data) {
+
+                    //console.log(data);
+                    $("#product02").empty();
+                    $("#product02").html(data);
+
+                },
+                error: function (request, status, error) {
+                    alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+                }
+
+            });
+
+        }*/
+
+
+        function get_product(ca_id) {
+            let targetSlideIndex = 0;
+            $.ajax({
+                type: "POST",
+                url: "./get_product_list.php",
+                data: "ca_id=" + ca_id,
+                cache: false,
+                async: false,
+
+                success: function (data) {
+
+                    //console.log(data);
+                    $("#product02").empty();
+
+                    $("#product02").html(data);
+                    
+
+                    $(".swiper-slide").each(function(index) {
+                    if ($(this).hasClass('active')) {
+                        targetSlideIndex = index;
+                        
+                    }
+                });
+
+
+                mainswiper.on('init', function() {
+                    mainswiper.slideTo(targetSlideIndex);
+               });
+
+                },
+                error: function (request, status, error) {
+                    alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+                }
+            });
+        }
+
+    });
+    
+    </script>
 </body>
 </html>

@@ -233,14 +233,6 @@ $(document).ready(function() {
             }
          }
     });
-	$('.swiper-button-next').on('click', function() {
-		// swiperDay.realIndex.click()
-		$('#product01 .swiper-slide:eq(' + (swiperDay.realIndex + ') a')).tab('show');
-	})
-	$('.swiper-button-prev').on('click', function() {
-		// swiperDay.realIndex.click() 
-		$('#product01 .swiper-slide:eq(' + (swiperDay.realIndex + ') a')).tab('show');
-	})
 });
 
 //totop 踰꾪듉

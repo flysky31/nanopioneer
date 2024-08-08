@@ -1176,6 +1176,9 @@
             }
         }
     }
+      #support01 {
+        margin: 50px auto;
+      }
     #contact01 {
         
         .inner {
@@ -1316,6 +1319,18 @@
                             height: 45px;
                             line-height: 45px;
                         }
+                    }
+                }
+            }
+        }
+    }
+    #support01 {
+        .inner{
+            .tab_area{
+                ul{
+                    li{
+                         height: 45px;
+                        line-height: 45px;
                     }
                 }
             }

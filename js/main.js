@@ -175,34 +175,7 @@ $(document).ready(function() {
           // }
       });
 
-
-    
-});
-  
-
-//totop 踰꾪듉
-// function toggleTotopButton() {
-//     var totopButton = document.getElementById("totop");
-//     if (document.documentElement.scrollTop > 300) {
-//       totopButton.style.opacity = "1";
-//     } else {
-//       totopButton.style.opacity = "0";
-//     }
-//   }
-  
-//   // �곷떒�쇰줈 �ㅽ겕濡ㅽ븯�� �⑥닔
-//   function scrollToTop() {
-//     document.documentElement.scrollTop = 0;
-//   }
-  
-//   // �ㅽ겕濡� �대깽�몃� 媛먯��섏뿬 "totop" 踰꾪듉�� �쒖떆/�④��� 泥섎━
-//   window.onscroll = function() {
-//     toggleTotopButton();
-//   };
-
-
-$(document).ready(function() {
-  //product slider
+      //product slider
       new Swiper('.swiper-container2', {
         //loop: true,
         slideToClickedSlide: true,
@@ -233,7 +206,34 @@ $(document).ready(function() {
             }
          }
     });
+
+
+    
 });
+  
+
+//totop 踰꾪듉
+// function toggleTotopButton() {
+//     var totopButton = document.getElementById("totop");
+//     if (document.documentElement.scrollTop > 300) {
+//       totopButton.style.opacity = "1";
+//     } else {
+//       totopButton.style.opacity = "0";
+//     }
+//   }
+  
+//   // �곷떒�쇰줈 �ㅽ겕濡ㅽ븯�� �⑥닔
+//   function scrollToTop() {
+//     document.documentElement.scrollTop = 0;
+//   }
+  
+//   // �ㅽ겕濡� �대깽�몃� 媛먯��섏뿬 "totop" 踰꾪듉�� �쒖떆/�④��� 泥섎━
+//   window.onscroll = function() {
+//     toggleTotopButton();
+//   };
+
+
+
 
 //totop 踰꾪듉
 // function toggleTotopButton() {

@@ -746,6 +746,80 @@
   margin: 50px auto;
 }
 
+#support_area {
+  background: #003B6D;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 180px;
+}
+#support_area .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+}
+#support_area .inner .title {
+  font-weight: 800;
+  color: #fff;
+}
+#support_area .inner .category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid #fff;
+  padding: 7px 0 0;
+  display: none;
+}
+#support_area .inner .category li.line {
+  width: 1px;
+  height: 12px;
+  background: #fff;
+  margin: 0 6px;
+}
+#support_area .inner .category li a {
+  color: #fff;
+  font-weight: 600;
+}
+
+#support01 {
+  width: 90%;
+  margin: 100px auto 0;
+  max-width: 1360px;
+}
+#support01 .inner .txt {
+  text-align: center;
+}
+#support01 .inner .txt .title {
+  font-weight: 600;
+}
+#support01 .inner .txt .sub_title {
+  color: #888888;
+}
+#support01 .inner .tab_area {
+  margin: 50px 0;
+}
+#support01 .inner .tab_area ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#support01 .inner .tab_area ul li {
+  width: 100%;
+  text-align: center;
+  height: 70px;
+  line-height: 70px;
+}
+#support01 .inner .tab_area ul li a {
+  color: #1445CE;
+  border: 1px solid #1445CE;
+}
+#support01 .inner .tab_area ul li a.active {
+  color: #fff;
+  background: #1445CE;
+}
+
 @media (max-width: 1600px) {
   #product01 .inner .swiper_area .container {
     margin: 0 50px;

@@ -785,7 +785,7 @@
 
 #support01 {
   width: 90%;
-  margin: 100px auto 0;
+  margin: 100px auto;
   max-width: 1360px;
 }
 #support01 .inner .txt {
@@ -996,6 +996,9 @@
   #contact01 .inner .form_area .inq form {
     margin: 50px 0 0;
   }
+  #support01 {
+    margin: 50px auto;
+  }
 }
 @media (max-width: 640px) {
   #about01 .inner .bg .introduction {
@@ -1064,6 +1067,10 @@
   }
   #datail01 .inner .flex .detail_txt .detail_container .list_more {
     width: 200px;
+    height: 45px;
+    line-height: 45px;
+  }
+  #support01 .inner .tab_area ul li {
     height: 45px;
     line-height: 45px;
   }
